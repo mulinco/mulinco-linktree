@@ -7,6 +7,7 @@ export default function ProjectCard({ project }: { project: ProjectLink }) {
       href={project.url}
       target="_blank"
       rel="noopener noreferrer"
+      aria-label={`Visualizar projeto: ${project.label}`}
       className="group relative flex items-center gap-4 px-5 py-4 w-full overflow-hidden backdrop-blur-sm transition-all duration-[220ms] ease-[cubic-bezier(0.4,0,0.2,1)] animate-fadeUp
         goth:bg-surface goth:border goth:border-border goth:rounded-md
         goth:hover:border-border-hover goth:hover:bg-surface-hover goth:hover:-translate-y-[2px] goth:hover:shadow-[0_6px_28px_rgba(160,0,20,0.22),_0_0_0_1px_rgba(224,0,32,0.18)]
@@ -24,7 +25,7 @@ export default function ProjectCard({ project }: { project: ProjectLink }) {
         className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-xl transition-colors duration-200 bg-[rgba(255,255,255,0.04)] text-text-muted group-hover:text-accent z-10"
       >
         <span>
-          <CodeIcon />
+          {project.icon}
         </span>
       </span>
 
